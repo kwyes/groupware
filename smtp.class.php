@@ -46,7 +46,7 @@ class mime
 class sendmail extends mime
 {
 //	protected $smtp_server = null;
-	protected $smtp_server = '184.70.148.118';
+	protected $smtp_server = '111.111.111.111';
 	protected $smtp_port = 0;
 	protected $smtp_timeout = 0;
 	protected $smtp_socketopen = 0;
@@ -63,7 +63,7 @@ class sendmail extends mime
 	protected $mail_notification = 0;
 	protected $mail_body = null;
 
-	public function __construct($server = '184.70.148.118', $port = 0, $timeout = 0)
+	public function __construct($server = '111.111.111.111', $port = 0, $timeout = 0)
 	{
 		$this->smtp_server = ($server != null) ? $server : "localhost";
 		$this->smtp_port = ($port != 0) ? $port : 25;
@@ -329,7 +329,7 @@ class sendmail extends mime
 	public function send($to, $from, $subject, $text, $priority = 3, $files = null)
 	{
 		$this->set_xmailer($_SERVER[HTTP_USER_AGENT]);
-//		$this->set_xmailer($_SERVER['184.70.148.118']);
+//		$this->set_xmailer($_SERVER['111.111.111.111']);
 		$this->set_content_type("text/html");
 		$this->set_charset("euc_kr");
 		$this->set_encoding("base64");
